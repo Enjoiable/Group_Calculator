@@ -1,3 +1,6 @@
+
+
+
 # Group_Calculator
 As a group we will create a calculator that will take in inputs and increament the variables each time around.
 
@@ -57,3 +60,7 @@ Christian Coggan~ In chrage of creating a class with the data struture of your c
 Emily Kroker~ In charge of designing the funtions that can be called to within the class that  Coggan is writing all of the above operations so the member variables can be easily accessed through the main. Don't worry about checking for errors Hayley will handle that from inside of your code by designing some test files.
 
 If you have any_questions please email me at zoovery@gmail.com
+
+***** One final note...
+
+All of thje code must either be written, or pasted to the main.cc file of gethub so we all get credit! We need to make sure theres a clear history of who all worked on the project! 
