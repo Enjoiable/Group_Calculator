@@ -2,14 +2,14 @@
 
 
 # Group_Calculator
-As a group we will create a calculator that will take in inputs and increament the variables each time around.
+As a group we will create a calculator that will take in inputs and increment the variables each time around.
 
-SECTION A.. Readme ffor reference.
+SECTION A.. Readme for reference.
 
-Individual assignments{}
+Individual assignments {}
 
 The project will be to create a program that can do algebra, with one special
-twist: every time you use a variable, it will update its value afterwards. So
+Twist; every time you use a variable, it will update its value afterwards. So
 if x equals 3, then x+x would return 7, since x was 3 the first time, and then
 4 the next time, and would be 5 afterwards.
 
@@ -51,16 +51,16 @@ have to check for this.
 
 SECTION B) Individual Task(before debug)
  
-Jose Moreno~  In charge of disgning the main() so that it reads in the input correctly from the user and branches it to the following fuction that EMily will write to compute the value of the two variables passed in, also side note if the user enters something like x * y * 2 make sure it doesnt't leave out the * 2 to  the resulting expression.
+Jose Moreno~  In charge of designing the main() so that it reads in the input correctly from the user and branches it to the following function that Emily will write to compute the value of the two variables passed in, also side note if the user enters something like x * y * 2 make sure it doesn’t leave out the * 2 to  the resulting expression.
 
-Hayley Andrews~  In charge of going through and figuring out where all of the different errors can occur inside of the code and designing a kill fuction that will end the program when they occur.
+Hayley Andrews~  In charge of going through and figuring out where all of the different errors can occur inside of the code and designing a kill function that will end the program when they occur. Error checking functions are to be written outside the other functions and to be called within the other functions as to lessen conflicts with GitHub.
 
-Christian Coggan~ In chrage of creating a class with the data struture of your choice that will be able to take and store the data of chars in its structure. using get and set methods to control the variables so that can be called from a function.(Name it cacluator or what ever you like).
+Christian Coggan~ In charge of creating a class with the data structure of your choice that will be able to take and store the data of chars in its structure. Using get and set methods to control the variables so that can be called from a function. (Name it calculator or whatever you like).
 
-Emily Kroker~ In charge of designing the funtions that can be called to within the class that  Coggan is writing all of the above operations so the member variables can be easily accessed through the main. Don't worry about checking for errors Hayley will handle that from inside of your code by designing some test files.
+Emily Kroker~ In charge of designing the functions that can be called to within the class that  Coggan is writing all of the above operations so the member variables can be easily accessed through the main. Don't worry about checking for errors Hayley will handle that from inside of your code by designing some test files.
 
-If you have any_questions please email me at zoovery@gmail.com
+If you have any questions please email me at zoovery@gmail.com
 
 ***** One final note...
 
-All of thje code must either be written, or pasted to the main.cc file of gethub so we all get credit! We need to make sure theres a clear history of who all worked on the project! 
+All of the code must either be written, or pasted to the main.cc file of GitHub so we all get credit! We need to make sure there’s a clear history of who all worked on the project!
