@@ -5,7 +5,6 @@
 using namespace std;
 
 int main(){
-	cout<<"The earth"<<endl;
 
 
 return 0;
