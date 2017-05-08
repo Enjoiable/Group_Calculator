@@ -5,7 +5,7 @@
 using namespace std;
 
 int main(){
-
+	//creatiang new ovject file
 
 return 0;
 }
