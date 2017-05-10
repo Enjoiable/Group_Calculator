@@ -26,8 +26,6 @@ int exponential(int x, int y){
 	return a;
 }
 
-int main(){
-=======
 struct variable{
 	char name = '@'; //non variables will also be made into variables with name '@'
 	int value;
@@ -35,18 +33,6 @@ struct variable{
 	variable(int num) {value = num;}  //use this constructor for regular numbers, e.g. when user says "2 * 3"
 	variable(char my_name, int num) {name = my_name; value = num; is_var = true;} //use this constructor to create an actual variable, e.g. when user says "LET x = 7"
 };
-
-int add(int x, int y) {
-	return x + y;
-}
-
-int subtract(int x, int y) { //sorry emily i had to check if my function was working
-	return x - y;
-}
-
-int multiply(int x, int y) {
-	return x*y;
-}
 
 int evaluate(vector<variable> &values, vector<char> &operators)  {//give these vectors to me in reverse order so i can use pop_back. ex (2 * 3 + 5) -> {5,3,2} and {+,*}
 	int x = values.back().value;
@@ -66,14 +52,13 @@ int evaluate(vector<variable> &values, vector<char> &operators)  {//give these v
 	operators.pop_back();
 	
 	int z;
-	if (op == '+') z = add(x, y);
+	if (op == '+') z = addition(x, y);
 	else if (op == '-') z = subtract(x, y);
 	else if (op == '*') z = multiply(x, y);
-	//else if (op == '/') z = divide(x, y);
-	//else if (op == '^') z = exponent(x, y); //have fun with these, emily
-	//else if (op == '%') z = modulus(x, y);
+	else if (op == '/') z = division(x, y);
+	else if (op == '^') z = exponential(x, y); //have fun with these, emily
+	else if (op == '%') z = mod(x, y);
 	else { cout << "Dammit Hayley" << endl; exit(0); } //this shouldnt trigger if error checking in main works correctly
->>>>>>> e76b5ff7ae4a1ffd9d61667962b7bfbebd3f5bfe
 
 	variable pushv(z);
 	values.push_back(pushv); //put a new value back on the stack
