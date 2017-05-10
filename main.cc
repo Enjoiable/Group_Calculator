@@ -5,7 +5,7 @@
 #include<cstdlib>
 using namespace std;
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 int  multiply(int x,int y){
 	return x*y;
 }
