@@ -21,6 +21,10 @@ int division(int x, int y){
 int mod(int x, int y){
 	return x%y;
 }
+int exponential(int x, int y){
+	int a= pow(x, y);
+	return a;
+}
 
 int main(){
 =======
