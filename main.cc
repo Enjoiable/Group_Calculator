@@ -8,9 +8,9 @@ using namespace std;
 struct variable{
 	char name = '@'; //non variables will also be made into variables with name '@'
 	int value;
-	bool is_var = false;                //I decided we didnt need a class or member functions, this struct will attack a variable name to its value
+	bool is_var = false;                //I decided we didnt need a class or member functions, this struct will attach a variable name to its value
 	variable(int num) {value = num;}  //use this constructor for regular numbers, e.g. when user says "2 * 3"
-	variable(char my_name, int num) {name = my_name; value = num; is_var = true;} //use this constructor to creat an actual variable, e.g. when user says "LET x = 7"
+	variable(char my_name, int num) {name = my_name; value = num; is_var = true;} //use this constructor to create an actual variable, e.g. when user says "LET x = 7"
 };
 
 int add(int x, int y) {
@@ -73,10 +73,9 @@ int main() {
 	
 	cout << evaluate(vars, ops) << endl; //2 * 3 + 5 - 6
 
-	ops.clear();
-	vars.clear();
+	
 	string eqn2 = "4-2*8+1";
-	for (int i = eqn2.size()-1; i >=0; i--) { //this for loop parses a string without spaces
+	for (int i = eqn2.size()-1; i >=0; i--) { //this for loop parses a string without spaces. Note: runs backwards, on purpose
 		if (i%2) ops.push_back(eqn2.at(i)); //1,3,5, etc should be the operators
 		else {                              //0,2,4, etc should be the numbers
 			const char* pointless = &eqn2.at(i); //atoi must take a "const char*"
@@ -85,21 +84,25 @@ int main() {
 			vars.push_back(thing);
 		}
 	}
-
 	cout << evaluate(vars, ops) << endl;
 	
-	ops.clear();
-	vars.clear();
 	variable x('x',3);
 	vars.push_back(x);
 	vars.push_back(x);  //evaluate x + x - x, where x starts at 3
 	vars.push_back(x);
 	ops = {'-','+'};
+	cout << evaluate(vars, ops) << endl;
 
-	cout << evaluate(vars, ops) << endl; 
+
+	cout << x.value << endl;
+	vars.push_back(x);
+	vars.push_back(x);  //evaluate x + x - x, where x should be 6 this time, but isnt
+	vars.push_back(x);
+	ops = {'-','+'};
+	cout << evaluate(vars, ops) << endl;
 
 
-}
+}//main
 
 
 
