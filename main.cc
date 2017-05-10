@@ -4,6 +4,22 @@
 
 using namespace std;
 
+int  multiply(int x,int y){
+	return x*y;
+}
+int addition(int x, int y){
+	return x+y;
+}
+int subtract(int x, int y){
+	return x-y;
+}
+int division(int x, int y){
+	return x/y;
+}
+int mod(int x, int y){
+	return x%y;
+}
+
 int main(){
 
 
