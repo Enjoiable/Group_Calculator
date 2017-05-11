@@ -26,6 +26,11 @@ int exponential(int x, int y){
 	return a;
 }
 
+void die(){
+cout<<"invalid input"<<endl;
+exit(1);
+}
+
 struct variable{
 	char name = '@'; //non variables will also be made into variables with name '@'
 	int value;
@@ -34,7 +39,6 @@ struct variable{
 	variable(char my_name, int num) {name = my_name; value = num; is_var = true;} //use this constructor to create an actual variable, e.g. when user says "LET x = 7"
 };
 
->>>>>>> 48ee29360ed57f027e0ec1a3db62ce2b6c2587c4
 int evaluate(vector<variable> &values, vector<char> &operators)  {//give these vectors to me in reverse order so i can use pop_back. ex (2 * 3 + 5) -> {5,3,2} and {+,*}
 	int x = values.back().value;
 	if (values.back().is_var) {
