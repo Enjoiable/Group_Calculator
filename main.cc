@@ -5,6 +5,27 @@
 #include<cstdlib>
 using namespace std;
 
+//<<<<<<< HEAD
+int  multiply(int x,int y){
+	return x*y;
+}
+int addition(int x, int y){
+	return x+y;
+}
+int subtract(int x, int y){
+	return x-y;
+}
+int division(int x, int y){
+	return x/y;
+}
+int mod(int x, int y){
+	return x%y;
+}
+int exponential(int x, int y){
+	int a= pow(x, y);
+	return a;
+}
+
 struct variable{
 	char name = '@'; //non variables will also be made into variables with name '@'
 	int value;
@@ -13,6 +34,7 @@ struct variable{
 	variable(char my_name, int num) {name = my_name; value = num; is_var = true;} //use this constructor to create an actual variable, e.g. when user says "LET x = 7"
 };
 
+<<<<<<< HEAD
 void die(){
 	cout << "BAD INPUT" << endl;
 	exit(1);
@@ -30,6 +52,8 @@ int multiply(int x, int y) {
 	return x*y;
 }
 
+=======
+>>>>>>> 48ee29360ed57f027e0ec1a3db62ce2b6c2587c4
 int evaluate(vector<variable> &values, vector<char> &operators)  {//give these vectors to me in reverse order so i can use pop_back. ex (2 * 3 + 5) -> {5,3,2} and {+,*}
 	int x = values.back().value;
 	if (values.back().is_var) {
@@ -48,12 +72,12 @@ int evaluate(vector<variable> &values, vector<char> &operators)  {//give these v
 	operators.pop_back();
 	
 	int z;
-	if (op == '+') z = add(x, y);
+	if (op == '+') z = addition(x, y);
 	else if (op == '-') z = subtract(x, y);
 	else if (op == '*') z = multiply(x, y);
-	//else if (op == '/') z = divide(x, y);
-	//else if (op == '^') z = exponent(x, y); //have fun with these, emily
-	//else if (op == '%') z = modulus(x, y);
+	else if (op == '/') z = division(x, y);
+	else if (op == '^') z = exponential(x, y); //have fun with these, emily
+	else if (op == '%') z = mod(x, y);
 	else { cout << "Dammit Hayley" << endl; exit(0); } //this shouldnt trigger if error checking in main works correctly
 
 	variable pushv(z);
