@@ -63,7 +63,7 @@ int evaluate(vector<variable> &values, vector<char> &operators)  {//give these v
 	else if (op == '/') z = division(x, y);
 	else if (op == '^') z = exponential(x, y); //have fun with these, emily
 	else if (op == '%') z = mod(x, y);
-	else { cout << "Dammit Hayley" << endl; exit(0); } //this shouldnt trigger if error checking in main works correctly
+	else die();
 
 	variable pushv(z);
 	values.push_back(pushv); //put a new value back on the stack
