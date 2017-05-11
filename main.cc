@@ -3,6 +3,7 @@
 #include<cmath>
 #include<vector>
 #include<cstdlib>
+#include<sstream>
 using namespace std;
 
 //<<<<<<< HEAD
@@ -73,6 +74,11 @@ int evaluate(vector<variable> &values, vector<char> &operators)  {//give these v
 
 
 int main() {
+	string s;
+
+	
+	
+	
 	vector<variable> vars;
 	variable one(6);	
 	variable two(5);	
