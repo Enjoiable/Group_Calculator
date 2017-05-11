@@ -1,5 +1,4 @@
 //Write all code and propose all updates in here! LL
-#include<iostream>
 #include<cmath>
 #include<vector>
 #include<cstdlib>
@@ -74,11 +73,49 @@ int evaluate(vector<variable> &values, vector<char> &operators)  {//give these v
 
 
 int main() {
+	
 	string s;
+	int x;
+	{
+	cout << "Enter x value";     
+	cin >> x;
+	}
+	int y;
+	{
+	cout << "Enter y value";
+	cin >> y;
+	}
+	getline(cin,s);
+	string w;
+	cin >> w;
+	if (w != "LET")
+	{
+	  cout << "Bad Input";
+	}
+	for(string i : vars){
+		cout << i;
+	}
+	
+	return 0;
 
 	
 	
 	
+	/*while(cin){
+	cin >> ws;
+	char c = cin.peek();
+	if (c == EOF) break;
+	if (!isdigit(c)){
+	
+	if( c == 'L')
+		else if( c == 'E')
+	}	
+	
+	
+	
+	
+	
+	} */
 	vector<variable> vars;
 	variable one(6);	
 	variable two(5);	
