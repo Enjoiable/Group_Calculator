@@ -34,25 +34,6 @@ struct variable{
 	variable(char my_name, int num) {name = my_name; value = num; is_var = true;} //use this constructor to create an actual variable, e.g. when user says "LET x = 7"
 };
 
-<<<<<<< HEAD
-void die(){
-	cout << "BAD INPUT" << endl;
-	exit(1);
-}
-
-int add(int x, int y) {
-	return x + y;
-}
-
-int subtract(int x, int y) { //sorry emily i had to check if my function was working
-	return x - y;
-}
-
-int multiply(int x, int y) {
-	return x*y;
-}
-
-=======
 >>>>>>> 48ee29360ed57f027e0ec1a3db62ce2b6c2587c4
 int evaluate(vector<variable> &values, vector<char> &operators)  {//give these vectors to me in reverse order so i can use pop_back. ex (2 * 3 + 5) -> {5,3,2} and {+,*}
 	int x = values.back().value;
