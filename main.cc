@@ -13,6 +13,11 @@ struct variable{
 	variable(char my_name, int num) {name = my_name; value = num; is_var = true;} //use this constructor to create an actual variable, e.g. when user says "LET x = 7"
 };
 
+void die(){
+	cout << "BAD INPUT" << endl;
+	exit(1);
+}
+
 int add(int x, int y) {
 	return x + y;
 }
