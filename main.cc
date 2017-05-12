@@ -1,9 +1,5 @@
 //Write all code and propose all updates in here! LL
 #include<iostream>
-<<<<<<< HEAD
-#include<cmath>
-=======
->>>>>>> 41d243e35f945a6a95d188607043ea025ed31a85
 #include<vector>
 #include<cstdlib>
 #include<sstream>
@@ -90,6 +86,7 @@ int evaluate(vector<variable> &values, vector<char> &operators, vector<variable>
 
 
 int main() {
+	/*
 <<<<<<< HEAD
 	
 	string s;
@@ -133,6 +130,7 @@ int main() {
 
 
 =======
+*/
 	vector<variable> var_database;
 	vector<variable> vars;
 	vector<char> ops;
@@ -169,6 +167,74 @@ int main() {
 			;
 		}
 		else {
+			
+			unsigned int digits = 0;
+			int x;
+			for (char c : w) 
+				if (isdigit(c)) digits++;
+			//cerr << digits << " digits in " << w << endl;
+			if (digits == w.size()) {
+				x = stoi(w);
+				variable t(x);
+				vars.push_back(t);
+			}
+			else if (w.size() == 1 && isalpha(w.at(0))) {
+				//cerr << w << " is a letter\n";
+				bool found = false;
+				for (variable bob: var_database) {
+					if (bob.name == w.at(0)) {
+						vars.push_back(bob);
+						found = true;
+					}
+				}
+				if (!found) {
+					//cerr << "Variable " << w.at(0) << " not defined\n";
+					die();
+				}
+			}
+			else {
+				//cerr << "First word not a number or char\n";
+				die();
+			}
+
+			while (iss >> w) {
+				unsigned int digits = 0;
+				int x;
+				for (char c : w) 
+					if (isdigit(c)) digits++;
+				if (digits == w.size()) {
+					x = stoi(w);
+					variable t(x);
+					vars.push_back(t);
+				}
+				else if (w.size() == 1 && isalpha(w.at(0))) {
+					bool found = false;
+					for (variable bob: var_database) {
+						if (bob.name == w.at(0)) {
+							vars.push_back(bob);
+							found = true;
+						}
+					}
+					if (!found) {
+						//cerr << "(#2)Variable " << w.at(0) << " not defined\n";
+						die();
+					}
+				}
+				else if ((w.size() == 1) &&
+						(w.at(0) == '+' || 
+						 w.at(0) == '-' ||
+						 w.at(0) == '*' ||
+						 w.at(0) == '/' ||
+						 w.at(0) == '%' ||
+						 w.at(0) == '^') )
+				{
+					ops.push_back(w.at(0));
+				}
+				else {
+					//cerr << "NO\n";
+					die();
+				}
+			/*
 			//this character by character method isnt working for numbers bigger than 9
 			for (char c : s) //parse the string 
 			{
@@ -204,10 +270,12 @@ int main() {
 				}
 				else die();
 			}
+			*/
+			}
 			reverse(vars.begin(), vars.end());
 			reverse(ops.begin(), ops.end());
 			cout << evaluate(vars, ops, var_database) << endl;
-		}
+		} //string while loop
 			
 	}//while
 
